@@ -8,6 +8,10 @@
   --golden: #af7c32;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::after,
 *::before {
@@ -39,6 +43,11 @@ a {
 }
 
 /* ========================= landing page ====================*/
+
+.hero {
+  margin-top: 100px;
+}
+
 .hero img {
   max-width: 100%;
   vertical-align: middle;
@@ -54,7 +63,7 @@ a {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -315,4 +324,405 @@ ul {
   font-size: 14px;
   color: hsla(0, 0%, 100%, 0.5);
   padding: 0 10px;
+}
+
+/* for header */
+header {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+  border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.2);
+}
+
+header .logo {
+  float: left;
+  width: 125px;
+  line-height: 100px;
+}
+
+header .logo a {
+  display: block;
+}
+
+header .logo img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+header .apply-now {
+  width: 230px;
+  float: right;
+  line-height: 100px;
+}
+
+a.login {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  border: none;
+  padding: 8px 24px;
+  line-height: 1.25;
+  display: inline-block;
+}
+
+a.started {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  background: var(--blue);
+  border-radius: 2px;
+  padding: 10px 20px;
+}
+
+header nav {
+  margin-left: 140px;
+  margin-right: 230px;
+  text-align: center;
+  position: relative;
+}
+
+header li {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  position: relative;
+}
+
+header li a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #000;
+  padding: 0 9px 0 10px;
+  display: block;
+  position: relative;
+  line-height: 100px;
+  text-decoration: none;
+  text-align: left;
+}
+
+header .sub-menu {
+  display: none;
+  position: absolute;
+  top: 74px;
+  left: 0;
+  width: 240px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
+  border-radius: 12px;
+  padding: 10px;
+  z-index: 99;
+}
+
+.chatbox {
+  position: fixed;
+  right: 12px;
+  bottom: 16px;
+  background-color: var(--blue);
+  font-size: 14px;
+  color: var(--white);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.chatbox span {
+  margin-left: 8px;
+}
+
+.chatbox:hover {
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+.chatbox::before {
+  content: "3";
+  position: absolute;
+  left: -10px;
+  top: -8px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: var(--white);
+  background-color: red;
+  font-size: 12px;
+  text-align: center;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+.arrow_btn {
+  display: none;
+  margin-top: 34px;
+  width: 32px;
+}
+
+.menu_icon {
+  float: left;
+  line-height: 50px;
+  display: none;
+}
+
+.menu_icon i {
+  font-size: 16px;
+  color: var(--black);
+}
+/* =================== media queries ====================*/
+
+@media screen and (max-width: 992px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    width: 100%;
+  }
+  .arrow {
+    display: none;
+  }
+  .arrow_btn {
+    display: block;
+  }
+
+  .hero-btn {
+    margin-top: 22px;
+    display: block;
+    width: 100%;
+    box-shadow: 0 2px 26px 0 hsl(0deg 0% 65% / 55%);
+  }
+
+  .banner_txt {
+    bottom: 0;
+  }
+
+  .banner_txt .hero-content {
+    flex: 1;
+  }
+
+  .top-section {
+    height: auto;
+  }
+
+  .top-section .logo {
+    float: none;
+    margin: auto;
+  }
+
+  .top-section .social-links {
+    float: none;
+    clear: left;
+  }
+
+  .top-section .social-links ul {
+    text-align: center;
+  }
+  .top-section .social-links a {
+    border: none;
+  }
+
+  .middle-section .link-box,
+  .middle-section .link-box-sm {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .middle-section h4 {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  .link-box-sm li a,
+  .link-box li a {
+    font-size: 16px;
+  }
+
+  ul.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .accordion {
+    transition: 0.4s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .accordion:after {
+    content: "\002B";
+    color: hsla(0, 0%, 100%, 0.5);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    font-size: 26px;
+  }
+
+  .link-box.small p {
+    font-size: 16px;
+  }
+
+  .active:after {
+    content: "\2212";
+    font-size: 26px;
+  }
+
+  header .menu_icon {
+    display: block;
+  }
+
+  header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    line-height: 46px;
+    width: 22vw;
+    max-width: 110px;
+  }
+
+  header .apply-now {
+    display: none;
+  }
+  header nav {
+    height: 100vh;
+    overflow: auto;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #fff;
+    left: -100%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .text-box {
+    margin-top: 30px;
+  }
+
+  .hero h5 {
+    font-size: 32px;
+    line-height: 31px;
+  }
+  .hero h2 {
+    font-size: 55px;
+    line-height: 31px;
+  }
+
+  .text-box h2 {
+    font-size: 30px;
+  }
+
+  .text-box ol li {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .text-box .body b {
+    font-size: 20px;
+  }
+
+  .bottom-section {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .bottom-section .left {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .bottom-section .left p {
+    line-height: normal;
+  }
+
+  .bottom-section .right {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 14px auto auto;
+  }
+
+  .bottom-section .right ul li a {
+    line-height: normal;
+    font-size: 16px;
+  }
+
+  .text-box p {
+    font-size: 20px;
+  }
+
+  .container {
+    max-width: 750px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .menu_icon i {
+    font-size: 22px;
+  }
+
+  .hero h5 {
+    font-size: 6.3vw;
+  }
+  .hero h2 {
+    font-size: 10vw;
+  }
+  .text-box h2 {
+    font-size: 7vw;
+  }
+
+  .text-box ol li {
+    font-size: 4vw;
+  }
+  .text-box p {
+    font-size: 4vw;
+  }
+
+  .text-box .body b {
+    font-size: 5vw;
+  }
+
+  .text-box .message b {
+    font-size: 4vw;
+  }
+  .middle-section h4 {
+    font-size: 4vw;
+  }
+
+  .link-box.small p {
+    font-size: 4vw;
+  }
+
+  .link-box-sm li a,
+  .link-box li a {
+    font-size: 4vw;
+  }
+
+  .bottom-section .right ul li a,
+  .bottom-section .left ul li a {
+    font-size: 4vw;
+  }
+  .top-section .social-links a {
+    padding: 20px;
+  }
+
+  .chat-msg {
+    display: none;
+  }
 }

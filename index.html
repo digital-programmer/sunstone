@@ -17,28 +17,88 @@
 <body>
     <!-- menu -->
     <header>
-        <div class="row">
+        <div class="container">
+            <div class="menu_icon">
+                <a href="#">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+            <div class="logo">
+                <a href="#">
+                    <img src="./assets/logo-sunstone.webp" alt="logo">
+                </a>
+            </div>
+            <div class="apply-now">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="started">Apply Now</a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Explore Programs
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Campuses
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Admissions
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Placement
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            About Sunstone
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <!-- hero section -->
     <section class="hero relative">
-        <img src="./assets/cover.jpg" alt="cover image">
+        <img src="./assets/cover.jpg" class="desktop" alt="cover image">
+        <img src="./assets/cover-mobile.jpg" alt="mobile" class="mobile">
         <div class="banner_txt">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-12 hero-content">
                         <h5>ready to be a</h5>
                         <h2>changemaker?</h2>
+                        <div class="arrow_btn">
+                            <img src="./assets/admission_scrolldown.png" alt="click below">
+                        </div>
                         <a href="#" class="hero-btn">Apply Now</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="arrow">
-            <i class="fas fa-chevron-up"></i>
+            <a href="#eligibility-criteria">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+
         </div>
     </section>
     <!-- eligibilty -->
+    <div id="eligibility-criteria" style="margin-bottom: 100px"></div>
     <section class="text-box">
         <div class="container">
             <div class="head">
@@ -164,8 +224,8 @@
         <div class="middle-section">
             <div class="container">
                 <div class="link-box-sm">
-                    <h4>Company</h4>
-                    <ul>
+                    <h4 class="accordion">Company</h4>
+                    <ul class="panel">
                         <li>
                             <a href="#">About us</a>
                         </li>
@@ -184,8 +244,8 @@
                     </ul>
                 </div>
                 <div class="link-box">
-                    <h4>PAY AFTER PLACEMENT MBA</h4>
-                    <ul>
+                    <h4 class="accordion">PAY AFTER PLACEMENT MBA</h4>
+                    <ul class="panel">
                         <li>
                             <a href="#">All Programs</a>
                         </li>
@@ -204,8 +264,8 @@
                     </ul>
                 </div>
                 <div class="link-box">
-                    <h4>Sunstone locations</h4>
-                    <ul>
+                    <h4 class="accordion">Sunstone locations</h4>
+                    <ul class="panel">
                         <li>
                             <a href="#">NIU, Greater Noida</a>
                         </li>
@@ -239,8 +299,8 @@
                     </ul>
                 </div>
                 <div class="link-box">
-                    <h4>Specialization</h4>
-                    <ul>
+                    <h4 class="accordion">Specialization</h4>
+                    <ul class="panel">
                         <li>
                             <a href="#">Marketing</a>
                         </li>
@@ -328,6 +388,12 @@
             </div>
         </div>
     </footer>
+    <div class="chatbox">
+        <div class="flex valign">
+            <i class="fas fa-comment-alt"></i>
+            <span class="chat-msg">Chat with us</span>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 
