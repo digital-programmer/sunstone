@@ -19,12 +19,12 @@
     <header>
         <div class="container">
             <div class="menu_icon">
-                <a href="#">
+                <a href="#" onclick="openNav()">
                     <i class="fas fa-bars"></i>
                 </a>
             </div>
             <div class="logo">
-                <a href="#">
+                <a href="#" onclick="openNav()">
                     <img src="./assets/logo-sunstone.webp" alt="logo">
                 </a>
             </div>
@@ -32,7 +32,7 @@
                 <a href="#" class="login">Login</a>
                 <a href="#" class="started">Apply Now</a>
             </div>
-            <nav>
+            <nav id="desktop-menu">
                 <ul>
                     <li>
                         <a href="#">
@@ -69,6 +69,49 @@
                         </a>
                     </li>
                 </ul>
+            </nav>
+            <nav id="mobile-menu">
+                <a class="closebtn" onclick="closeNav()">&times;</a>
+                <ul>
+                    <li>
+                        <a href="#" class="flex space-between valign">
+                            <span>Explore Programs</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex space-between valign">
+                            <span>Campuses</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex space-between valign">
+                            <span>Admissions</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex space-between valign">
+                            <span>Placement</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex space-between valign">
+                            <span>About Sunstone</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex space-between valign">
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="apply-now">
+                    <a href="#" class="login">Login</a>
+                    <a href="#" class="started">Apply Now</a>
+                </div>
             </nav>
         </div>
     </header>
